@@ -2,7 +2,10 @@ let express = require ('express')
 
 let app = express()
 
+let azul = 18
+
 let path = require('path')
+app.use(express.static('DH-Heroes/public'));
 
 app.get("/home",(req,res) => {
 res.sendFile(path.join(__dirname, '/DH-Heroes/views/index.html'))
@@ -30,7 +33,7 @@ app.get("/turing",(req,res) => {
     res.sendFile(path.join(__dirname, '/DH-Heroes/views/turing.html'))
 })
 
-// app.use(express.static('public'))
+
 
 
 
